@@ -12,9 +12,8 @@ object GameEngine {
     lines <- inputFilePath.read
     outcomes <- OutcomeStrike(lines)
     players <- Player(2)
-    turns = Turn(players.length, outcomes)
     carromBoard <- CarromBoard()
-    gameState <- play(turns, GameState(carromBoard, players))
+    gameState <- play(Turn(players.length, outcomes), GameState(carromBoard, players))
   }  yield result(gameState.players)
 
 

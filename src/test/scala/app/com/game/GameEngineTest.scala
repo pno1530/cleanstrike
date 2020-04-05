@@ -28,7 +28,7 @@ class GameEngineTest extends Specification with Mockito{
     }
 
     "return `InsufficientTurns` when turns are not suffecient" in {
-      val inputfilePath = "src/test/resources/TurnsInsuffecient.txt"
+      val inputfilePath = "src/test/resources/InsufficientTurns.txt"
 
       val actual = GameEngine.playGame(inputfilePath)
 

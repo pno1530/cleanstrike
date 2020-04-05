@@ -5,8 +5,13 @@ case class CarromBoard private(coins: List[Coin]){
 
   def dropCoins(count: Int, coin: Coin) = {
     val matchingCoins = coins.filter(_ == coin)
-    if(count > matchingCoins.size) Left(InvalidCoinsCount)
-    else CarromBoard(matchingCoins.drop(count) ++ coins.filterNot(_ == coin))
+    CarromBoard(matchingCoins.drop(count) ++ coins.filterNot(_ == coin))
+//    if(count > matchingCoins.size) {
+//      println("coins--"+count+" size: "+matchingCoins.size)
+//      println("this--"+this)
+//      Left(InvalidCoinsCount)
+//    }
+//    else CarromBoard(matchingCoins.drop(count) ++ coins.filterNot(_ == coin))
   }
 
 }

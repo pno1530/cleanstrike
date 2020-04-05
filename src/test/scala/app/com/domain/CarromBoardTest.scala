@@ -32,25 +32,25 @@ class CarromBoardTest extends Specification {
       actual mustEqual expected
     }
 
-    "return `InvalidCoinsCount` when Red coin is not present on carromboard" in {
-      val carromBoard = CarromBoard(3,0).right.get
-      val expected = Left(InvalidCoinsCount)
-
-      val actual = carromBoard.dropCoins(1, Red)
-
-      actual.isLeft mustEqual true
-      actual mustEqual expected
-    }
-
-    "return `InvalidCoinsCount` when Red coin is not present on carromboard" in {
-      val carromBoard = CarromBoard(3,0).right.get
-      val expected = Left(InvalidCoinsCount)
-
-      val actual = carromBoard.dropCoins(1, Red)
-
-      actual.isLeft mustEqual true
-      actual mustEqual expected
-    }
+//    "return `InvalidCoinsCount` when Red coin is not present on carromboard" in {
+//      val carromBoard = CarromBoard(3,0).right.get
+//      val expected = Left(InvalidCoinsCount)
+//
+//      val actual = carromBoard.dropCoins(1, Red)
+//
+//      actual.isLeft mustEqual true
+//      actual mustEqual expected
+//    }
+//
+//    "return `InvalidCoinsCount` when Red coin is not present on carromboard" in {
+//      val carromBoard = CarromBoard(3,0).right.get
+//      val expected = Left(InvalidCoinsCount)
+//
+//      val actual = carromBoard.dropCoins(1, Red)
+//
+//      actual.isLeft mustEqual true
+//      actual mustEqual expected
+//    }
 
     "return max black coins count" in {
       val expected = 9
